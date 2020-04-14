@@ -1,0 +1,71 @@
+.clockFace {
+    width: 300px;
+    height: 300px;
+    border-radius: 15%;
+    position: relative;
+    margin: 10px;
+    border: 20px solid brown;
+    background: linear-gradient(150deg, rgb(212, 45, 79) 33%, rgb(66, 50, 50) 66%);
+    /* box-shadow:
+        0 0 0px 2px rgba(53, 12, 12, 0.507),
+        inset 0 0 0 3px rgb(163, 42, 42),
+        inset 0 0 15px black,
+        0 0 10px rgba(0,0,0,0.2); */
+}
+
+.clockHand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 50%;
+    left: 50%;
+    position: absolute;
+    height: 50%;
+    transform-origin: bottom;
+    transition: 0.055s;
+    transition-timing-function: cubic-bezier(0.34, 2.17, 1, 1);
+}
+
+.hourHand {
+    background-color: pink;
+    width: 8px;
+    height: 30%;
+}
+
+.minuteHand {
+    background-color: yellow;
+    width: 6px;
+    height: 40%;
+}
+
+.secondHand {
+    background-color: turquoise;
+    width: 4px;
+    height: 45%;
+}
+
+.noAnimation {
+    transition: none;
+    transition-timing-function: none;
+}
+
+.dial {
+    background-color: white;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+.dialHand {
+    transform-origin: bottom;
+    top: 0%;
+    left: 145px;
+    height: 50%;
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 10px;
+}
