@@ -10,21 +10,36 @@ function App() {
   const [clocks, setClocks] = useState([]);
   const [offsetByIP, setOffsetByIP] = useState(0);
 
-  const mainStyle = {
-    display: "grid",
-    gridTemplate: "1fr 1fr / 1fr 1fr 1fr",
-    alignItems: "center",
-    background: "url('analog.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "top",
-    width: "100%",
-    height: "90%"
+  const fixName = name => {
+    const spaces = new RegExp(" ", "g");
+    const underscores = new RegExp("_", "g");
+    return name.includes(" ") ? name.replace(spaces, "_") : name.replace(underscores, " ");
   }
 
   const bodyStyle = {
     width: "100vw",
     height: "100vh",
   }
+
+  const mainStyle = {
+    background: "url('analog.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "top",
+    width: "100%",
+    height: "90%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  }
+
+    const clockGrid = {
+      width: "90%",
+      height: "95%",
+      display: "grid",
+      gridTemplate: "1fr 1fr / 1fr 1fr 1fr",
+    }
+
+  
 
   const placeholder = {
     display: "flex",
@@ -57,9 +72,9 @@ function App() {
   useEffect(()=> {
     const renderClocks = () => {
       setClocks([]);
-      if (selectedTimezones.length != 0) {
+      if (selectedTimezones.length !== 0) {
         selectedTimezones.forEach(item => {
-          setClocks(prevState => [...prevState, <Clock name={item.timezone} key={item.unixtime} timeDifference={parseInt(item.utc_offset) - parseInt(offsetByIP)} remove={remove} datetime={item.datetime}/>])
+          setClocks(prevState => [...prevState, <Clock name={item.timezone} key={item.unixtime} timeDifference={parseInt(item.utc_offset) - parseInt(offsetByIP)} remove={remove} datetime={item.datetime} fixName={fixName}/>])
         });
       }
     }
@@ -107,9 +122,11 @@ function App() {
 
   return (
     <div style={bodyStyle}>
-      <Navbar countryData={countryData} addClock={addClock} reset={reset}/>
+      <Navbar countryData={countryData} addClock={addClock} reset={reset} fixName={fixName}/>
       <div style={mainStyle}>
-        {clocks}
+        <div style={clockGrid}>
+          {clocks}
+        </div>
       </div>
     </div>
   );

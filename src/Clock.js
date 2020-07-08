@@ -84,6 +84,12 @@ function Clock(props) {
         return myDials;
     }
 
+    const createDigitalTime = () => {
+        const myDate = new Date();
+        myDate.setHours(currentTime.getHours() + props.timeDifference);
+        return myDate.toLocaleTimeString();
+    }
+
     const removeHandler = () => {
         console.log(myClock.current.classList)
         myClock.current.classList.add(styles.disappear)
@@ -100,11 +106,10 @@ function Clock(props) {
                 <div className={styles.clockLabel}>
                     <p className={styles.amOrPm}>{amHour ? "AM" : "PM"}</p>
                 </div>
-                <div className={styles.remove} onClick={removeHandler}><div>X</div></div>
-                      
+                <div className={styles.remove} onClick={removeHandler}><div>X</div></div>          
             </div>
-            <p className = {styles.timeText}>{props.name}<br/>
-            </p>
+            <div className={styles.smallClock}>{createDigitalTime()}<div className={styles.smallRemove} onClick={removeHandler}>X</div></div>
+            <p className = {styles.timeText}>{props.fixName(props.name)}</p>
         </div>
     )
 }

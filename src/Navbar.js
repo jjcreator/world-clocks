@@ -12,14 +12,14 @@ function Navbar(props) {
             }
             else {
                 for (let i=0; i<props.countryData.length; i++) {
-                    options.push(<option key={i}>{props.countryData[i]}</option>)
+                    options.push(<option key={i}>{props.fixName(props.countryData[i])}</option>)
                 }
             }
             return options;
     }
 
     const clickHandler = () => {
-        props.addClock(selectEl.current.value);
+        props.addClock(props.fixName(selectEl.current.value));
     }
 
     const resetHandler = () => {
