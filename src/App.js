@@ -39,8 +39,6 @@ function App() {
       gridTemplate: "1fr 1fr / 1fr 1fr 1fr",
     }
 
-  
-
   const placeholder = {
     display: "flex",
     justifyContent: "center",
@@ -50,19 +48,19 @@ function App() {
   }
 
   useEffect(()=> {
-    fetch("http://worldtimeapi.org/api/timezone")
+    fetch("https://worldtimeapi.org/api/timezone")
       .then(blob => blob.json())
       .then(data => {
         setCountryData(data);
       });
-    fetch("http://worldtimeapi.org/api/ip")
+    fetch("https://worldtimeapi.org/api/ip")
       .then(blob => blob.json())
       .then(data => {
         setOffsetByIP(data.utc_offset)
       })
       .catch(err => {
         console.log(err + "Failed to recognize your timezone by public IP. Setting your timezone to Poland");
-        fetch("http://worldtimeapi.org/timezone/Europe/Warsaw")
+        fetch("https://worldtimeapi.org/timezone/Europe/Warsaw")
           .then(blob => blob.json())
           .then(data => setOffsetByIP(data.utc_offset))
           .catch(err => console.log(err));
@@ -100,7 +98,7 @@ function App() {
     }
 
     setClocks(prevState => [...prevState, <div style={placeholder} key={prevState.length}><span>Loading your clock...</span></div>]);
-    let currentURL = `http://worldtimeapi.org/api/timezone/${timezone}`;
+    let currentURL = `https://worldtimeapi.org/api/timezone/${timezone}`;
     fetch(currentURL)
       .then(blob=>blob.json())
       .then(data => {
