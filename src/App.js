@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Clock from "./Clock";
 import Navbar from './Navbar';
+const bgImage = new Image()
+bgImage.src = "analog.jpg"
 
 function App() {
 
@@ -17,7 +19,7 @@ function App() {
   }
 
   const bodyStyle = {
-    width: "100vw",
+    width: "100%",
     height: "100vh",
   }
 
