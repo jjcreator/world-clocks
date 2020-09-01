@@ -15,7 +15,7 @@ An app which lets you check the time in any timezone in the world and display up
 
 ## About
 
-My first real project using React. A simple app that fetches data from an API (http://worldtimeapi.org/) and allows the user to visualize it in the form of working clocks, that show the current time in the chosen timezone. Up to 6 clocks can be displayed at the same time. Basic design. Limited responsiveness.
+My first real project using React. A simple app that fetches data from an API and allows the user to visualize it in the form of working clocks, that show the current time in the chosen timezone. Up to 6 clocks can be displayed at the same time. Basic design. Limited responsiveness.
 
 #### Main features
 * data fetching from an API endpoint (requests data once for all the timezones)
