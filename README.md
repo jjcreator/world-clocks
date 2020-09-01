@@ -19,7 +19,7 @@ My first real project using React. A simple app that fetches data from an API an
 
 #### Main features
 * data fetching from an API endpoint (requests data once for all the timezones)
-* a select menu list with the tinames of the fetched timezone data entries
+* a select menu with a list of the available timezones
 * working analog (digital on a smaller screen size) clocks that display the corrent time for the selected timezone
 * up to 6 clocks at the same time
 
