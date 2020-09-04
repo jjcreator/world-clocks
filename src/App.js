@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
+import styles from "./mainStyle.module.css"
 import Clock from "./Clock";
 import Navbar from './Navbar';
 
@@ -14,37 +15,6 @@ function App() {
     const spaces = new RegExp(" ", "g");
     const underscores = new RegExp("_", "g");
     return name.includes(" ") ? name.replace(spaces, "_") : name.replace(underscores, " ");
-  }
-
-  const bodyStyle = {
-    width: "100%",
-    height: "100vh",
-  }
-
-  const mainStyle = {
-    background: "url('analog.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "top",
-    width: "100%",
-    height: "90%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
-  }
-
-    const clockGrid = {
-      width: "90%",
-      height: "95%",
-      display: "grid",
-      gridTemplate: "1fr 1fr / 1fr 1fr 1fr",
-    }
-
-  const placeholder = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    color: "white",
-    fontSize: "25px"
   }
 
   useEffect(()=> {
@@ -97,7 +67,7 @@ function App() {
       return;
     }
 
-    setClocks(prevState => [...prevState, <div style={placeholder} key={prevState.length}><span>Loading your clock...</span></div>]);
+    setClocks(prevState => [...prevState, <div className={styles.placeholder} key={prevState.length}><span>Loading your clock...</span></div>]);
     let currentURL = `https://worldtimeapi.org/api/timezone/${timezone}`;
     fetch(currentURL)
       .then(blob=>blob.json())
@@ -119,10 +89,10 @@ function App() {
   }
 
   return (
-    <div style={bodyStyle}>
+    <div>
       <Navbar countryData={countryData} addClock={addClock} reset={reset} fixName={fixName}/>
-      <div style={mainStyle}>
-        <div style={clockGrid}>
+      <div className={styles.mainStyle}>
+        <div className={styles.clockGrid}>
           {clocks}
         </div>
       </div>

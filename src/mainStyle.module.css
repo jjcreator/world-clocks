@@ -1,0 +1,46 @@
+  .mainStyle {
+    background-image: url(./images/analog.jpg);
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clockGrid {
+    width: 90%;
+    grid-gap: 20px;
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr 1fr;
+    padding-bottom: 10px;
+}
+
+.placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+}
+
+@media (max-width: 1150px) {
+    .clockGrid {
+        grid-gap: 40px;
+    }
+}
+
+@media (max-width: 800px) {
+    .clockGrid {
+        grid-template: 1fr/1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .clockGrid {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+}
