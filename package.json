@@ -1,6 +1,6 @@
 {
-  "homepage": "https://jjcreator.github.io/clocks",
-  "name": "clocks",
+  "homepage": "https://jjcreator.github.io/world-clocks",
+  "name": "world-clocks",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
