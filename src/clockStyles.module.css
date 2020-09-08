@@ -6,10 +6,20 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    animation: appear 0.5s ease-in;
+    -webkit-animation: appear 0.5s ease-in;
+            animation: appear 0.5s ease-in;
     width: 100%;
     height: 100%;
     padding-top: 15px;
+}
+
+@-webkit-keyframes appear {
+    0% {
+        transform: scale(0)
+    } 
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes appear {
@@ -22,7 +32,17 @@
 }
 
 .disappear {
-    animation: disappear 0.4s ease-in forwards;
+    -webkit-animation: disappear 0.4s ease-in forwards;
+            animation: disappear 0.4s ease-in forwards;
+}
+
+@-webkit-keyframes disappear {
+    0% {
+        transform: scale(1)
+    } 
+    100% {
+        transform: scale(0);
+    }
 }
 
 @keyframes disappear {
