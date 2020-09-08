@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/clocks/static/css/main.e9147131.chunk.css",
-    "main.js": "/clocks/static/js/main.7b4fa3cc.chunk.js",
-    "main.js.map": "/clocks/static/js/main.7b4fa3cc.chunk.js.map",
-    "runtime-main.js": "/clocks/static/js/runtime-main.94dd42d8.js",
-    "runtime-main.js.map": "/clocks/static/js/runtime-main.94dd42d8.js.map",
-    "static/js/2.cd5fcfc4.chunk.js": "/clocks/static/js/2.cd5fcfc4.chunk.js",
-    "static/js/2.cd5fcfc4.chunk.js.map": "/clocks/static/js/2.cd5fcfc4.chunk.js.map",
-    "index.html": "/clocks/index.html",
-    "precache-manifest.56f45c2b559cf97f1eef4779c9fdf9bd.js": "/clocks/precache-manifest.56f45c2b559cf97f1eef4779c9fdf9bd.js",
-    "service-worker.js": "/clocks/service-worker.js",
-    "static/css/main.e9147131.chunk.css.map": "/clocks/static/css/main.e9147131.chunk.css.map",
-    "static/js/2.cd5fcfc4.chunk.js.LICENSE.txt": "/clocks/static/js/2.cd5fcfc4.chunk.js.LICENSE.txt",
-    "static/media/mainStyle.module.css": "/clocks/static/media/analog.eb40696d.jpg"
+    "main.css": "/world-clocks/static/css/main.58eeb159.chunk.css",
+    "main.js": "/world-clocks/static/js/main.b03c42e8.chunk.js",
+    "main.js.map": "/world-clocks/static/js/main.b03c42e8.chunk.js.map",
+    "runtime-main.js": "/world-clocks/static/js/runtime-main.53d99039.js",
+    "runtime-main.js.map": "/world-clocks/static/js/runtime-main.53d99039.js.map",
+    "static/js/2.2d6f3897.chunk.js": "/world-clocks/static/js/2.2d6f3897.chunk.js",
+    "static/js/2.2d6f3897.chunk.js.map": "/world-clocks/static/js/2.2d6f3897.chunk.js.map",
+    "index.html": "/world-clocks/index.html",
+    "precache-manifest.3ad176b17977877210a1b3acb786fafd.js": "/world-clocks/precache-manifest.3ad176b17977877210a1b3acb786fafd.js",
+    "service-worker.js": "/world-clocks/service-worker.js",
+    "static/css/main.58eeb159.chunk.css.map": "/world-clocks/static/css/main.58eeb159.chunk.css.map",
+    "static/js/2.2d6f3897.chunk.js.LICENSE.txt": "/world-clocks/static/js/2.2d6f3897.chunk.js.LICENSE.txt",
+    "static/media/mainStyle.module.css": "/world-clocks/static/media/analog.eb40696d.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.94dd42d8.js",
-    "static/js/2.cd5fcfc4.chunk.js",
-    "static/css/main.e9147131.chunk.css",
-    "static/js/main.7b4fa3cc.chunk.js"
+    "static/js/runtime-main.53d99039.js",
+    "static/js/2.2d6f3897.chunk.js",
+    "static/css/main.58eeb159.chunk.css",
+    "static/js/main.b03c42e8.chunk.js"
   ]
 }
